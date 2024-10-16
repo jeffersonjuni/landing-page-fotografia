@@ -1,0 +1,190 @@
+/*mobile configuração*/
+
+@media (max-width: 800px) {
+
+    /* Ajuste geral de texto e espaçamento */
+    body {
+        font-size: 1.8rem;
+        /* Tamanho do texto menor para mobile */
+        padding: 0 10px;
+    }
+
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Espaçamento do conteúdo principal para mobile */
+    .main-content {
+        padding: 20px;
+    }
+
+    /* Ajuste de seções */
+    section.section {
+        padding: 20px 10px;
+    }
+
+    /* Seção de Trabalhos Recentes */
+    .grid {
+        display: block;
+        /* Grid em coluna para dispositivos móveis */
+    }
+
+    .grid article {
+        margin-bottom: 20px;
+    }
+
+    /* Imagens responsivas */
+    img {
+        width: 100%;
+        height: auto;
+
+    }
+
+    .trabalhos-heading,
+    .top3-heading {
+        display: flex;
+        text-align: center;
+        padding-top: 10rem;
+    }
+
+    .grid h3::before {
+        /*aproximar os numeros das imagens*/
+        counter-increment: grid-counter;
+        content: counter(grid-counter);
+        position: absolute;
+        font-size: 8rem;
+        font-style: italic;
+        top: -3rem;
+        left: 15rem;
+        transform: rotate(5deg);
+    }
+
+    .trabalhos-description,
+    /*centralizar titulos de trabalhos recentes e de top trabalhos*/
+    .top3-description {
+        display: flex;
+        text-align: center;
+    }
+
+    .contato h2 {
+        padding-top: 10rem;
+    }
+
+    .galeria-heading,
+    .galeria-description {
+        padding-top: 10rem;
+    }
+
+    .galeria-description {
+        padding-top: 0.1rem;
+    }
+
+    .galeria-img {
+        padding: auto;
+    }
+
+    #galeria-grid {
+        /*deixando grid da galeria no mobile formatada*/
+        display: grid;
+        justify-content: center;
+        padding-left: 5rem;
+    }
+
+    /* Formulário de contato */
+    .form-grid {
+        display: block;
+        /* Formulário em coluna para mobile */
+    }
+
+    .form-group {
+        width: 100%;
+        /* Campos ocupam toda a largura */
+    }
+
+    /* Footer */
+    #footer-main {
+        display: flex;
+        flex-direction: initial;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer-main img {
+        width: 20px;
+        /* Ícones menores no footer */
+        margin: 5px 0;
+    }
+
+    .menu {
+        bottom: 0;
+        text-align: center;
+    }
+
+    .menu-content,
+    .menu-content ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-content {
+        height: 100vh;
+    }
+
+    /* Oculta o checkbox */
+    .close-menu {
+        display: none;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+    }
+
+    /* Ícone inicial do botão de menu (☰) */
+    .close-menu-label::after {
+        content: '☰';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    /* Esconde o menu inicialmente */
+    /*gambiarra que funcionou :)*/
+    .menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: 100vh;
+        color: var(--white-color);
+        padding: 1rem;
+        
+    }
+
+    /* Exibe o menu quando o checkbox é marcado */
+    .close-menu:checked~.menu {
+        display: block;
+    }
+
+    /* Troca o ícone para '×' quando o menu está aberto */
+    .close-menu:checked+.close-menu-label::after {
+        content: '×'; 
+    }
+
+    .menu-spacing{
+        display: none;
+    }
+
+    
+}

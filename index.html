@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Fotografia</title>
+    <link rel="stylesheet" href="/assets/css/elements.css">
+    <link rel="stylesheet" href="/assets/css/variaveis.css">
+    <link rel="stylesheet" href="/assets/css/classes.css">
+    <link rel="stylesheet" href="/assets/css/menu.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/mobile.css">
+</head>
+
+<body class="main-bg">
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="close menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
+    <aside class="menu white-bg">
+        <div class="main-content menu-content">
+            <h1 onclick="getElementById('close-menu').checked = false;">
+                <a href="#home" class="botao-home">📸 Arte em Foco</a>
+            </h1>
+            <nav>
+                <ul onclick="getElementById('close-menu').checked = false;" >
+                    <li><a href="#intro">Introdução</a></li>
+                    <li><a href="#trabalhos">Trabalhos Recentes</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#top3">Top 3 Trabalhos</a></li>
+                    <li><a href="#tabela">Tabela de Preços</a></li>
+                    <li><a href="#contato">Contatos</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <div class="menu-spacing"></div>
+    <!--HTML home pagina-->
+    <section id="home" class="home main-bg section">
+        <div class="main-content home-content">
+            <div class="home-text-content">
+                <h2>Arte em Foco</h2><!--titulo principal da pagina-->
+                <p id="paragrafo-home">Capturando Momentos Inesquecíveis!</p>
+            </div>
+            <div class="home-img">
+                <img src="assets/img/undraw_moments_0y20.svg"
+                    alt="logo de camera, uma foto de montanhas, outra foto de arvores e aultima de um carro na estrada">
+            </div>
+        </div>
+    </section>
+
+    <!--seção de introdução para contar um pouco sobre a empresa-->
+    <section id="intro" class="white-bg section">
+        <div class="main-content intro-content">
+            <div>
+                <h2>introdução</h2>
+                <p>Bem-vindo à Arte em Foco, uma empresa dedicada a capturar e imortalizar seus momentos mais especiais.
+                    Com um olhar atento aos detalhes e uma paixão pela fotografia, oferecemos serviços de alta qualidade
+                    para garantir que cada foto seja uma lembrança única e duradoura. Seja em eventos, ensaios ou
+                    projetos personalizados, estamos aqui para transformar suas memórias em verdadeiras obras de arte.
+                </p>
+
+            </div>
+        </div>
+
+    </section>
+    <!--seção dos ultimos trabalhos feitos-->
+    <section id="trabalhos" class="trabalhos-main-bg section">
+        <div class="main-content trabalhos-main-content">
+            <h2 class="trabalhos-heading">trabalhos recentes</h2>
+            <p class="trabalhos-description">Conheça nossos trabalhos recentes na Arte em Foco, com momentos capturados
+                de forma única e criativa! 📸</p>
+
+            <div class="grid"> <!--definido uma grid para alhinhar os trabalhos-->
+                <article>
+                    <h3>
+                        <img class="img-grid" src="assets/img/img-1.jpg" alt="praia de dia com o tempo nublado">
+                    </h3>
+                    <p>Uma praia serena ao entardecer, com o sol se pondo no horizonte, pintando o céu nublado em tons
+                        de laranja e dourado. As nuvens se espalham suavemente, criando um cenário de tranquilidade e
+                        beleza natural.</p>
+                </article>
+                <article>
+                    <h3>
+                        <img class="img-grid" src="assets/img/img-2.jpg" alt="porto de noite">
+                    </h3>
+                    <p>Um porto à noite, sob um céu nublado e iluminado pelas luzes da cidade ao fundo. A cena transmite
+                        uma atmosfera de tranquilidade e mistério.
+                    </p>
+                </article>
+                <article>
+                    <h3>
+                        <img class="img-grid" src="assets/img/img-3.jpg" alt="retrato de uma mulher de costas na praia">
+                    </h3>
+                    <p>Um retrato de uma mulher de costas na praia, com os cabelos ao vento e a silhueta destacada
+                        contra o vasto horizonte. O mar e a areia criam um cenário sereno, evocando um senso de
+                        liberdade e contemplação.</p>
+                </article>
+                <article>
+                    <h3>
+                        <img class="img-grid" src="assets/img/img-4.jpg" alt="cidade em um fim de tarde">
+                    </h3>
+                    <p>Uma cidade vibrante ao fim da tarde, com prédios iluminados e um parque verde, onde pessoas
+                        desfrutam do ambiente tranquilo e relaxante.</p>
+                </article>
+                <article>
+                    <h3>
+                        <img class="img-grid" src="assets/img/img-5.jpg" alt="gato preto e o ceu azul no fundo">
+                    </h3>
+                    <p>Um gato preto, elegante e curioso, posicionado contra um céu azul vibrante. Sua pelagem brilha
+                        sob a luz do sol, destacando-se contra o fundo claro e sereno.</p>
+                </article>
+                <article>
+                    <h3>
+                        <img class="img-grid" src="assets/img/img-6.jpg" alt="carro azul escuro">
+                    </h3>
+                    <p>Um carro azul escuro antigo, exibindo seu charme vintage. Suas linhas clássicas e detalhes
+                        elegantes evocam nostalgia, enquanto a luz do sol destaca sua pintura brilhante.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!--seção das imagens da galeria dos ultimos trabalhos feitos-->
+    <section id="galeria" class="white-bg section">
+        <div class="main-content galeria-content">
+            <h2 class="galeria-heading">galeria 🖼️</h2>
+            <p class="galeria-description">Bem-vindo à nossa galeria, onde cada imagem conta uma história única. Explore
+                uma coleção cuidadosamente selecionada que captura momentos especiais e a beleza do mundo ao nosso
+                redor.
+            </p>
+
+            <div class="grid" id="galeria-grid"> <!--definido uma grid para alhinhar as imagens-->
+                <div class="galeria-img">
+                    <img src="assets/img/img-1.jpg" alt="praia de dia com o tempo nublado">
+                </div>
+                <div class="galeria-img">
+                    <img src="assets/img/img-2.jpg" alt="porto de noite">
+                </div>
+                <div class="galeria-img">
+                    <img src="assets/img/img-3.jpg" alt="retrato de uma mulher de costas na praia">
+                </div>
+                <div class="galeria-img">
+                    <img src="assets/img/img-4.jpg" alt="cidade em um fim de tarde">
+                </div>
+                <div class="galeria-img">
+                    <img src="assets/img/img-5.jpg" alt="gato preto e o ceu azul no fundo">
+                </div>
+                <div class="galeria-img">
+                    <img src="assets/img/img-6.jpg" alt="carro azul escuro">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--seção para os 3 melhores trabalhos-->
+    <section id="top3" class="top3-main-bg section">
+        <div class="main-content top3-main-content">
+            <h2 class="top3-heading">trabalhos mais bem avaliados</h2>
+            <p class="top3-description">Explore nossos trabalhos mais bem avaliados, onde cada imagem reflete a
+                qualidade e a criatividade de nossos projetos fotográficos.
+            </p>
+
+            <div class="grid"><!--definido uma grid para alhinhar o top 3 trabalhos feitos-->
+                <article>
+                    <h3>
+                        <img class="img-grid" src="assets/img/img-4.jpg" alt="cidade em um fim de tarde">
+                    </h3>
+                    <p>Esse trabalho é um dos mais bem avaliados por capturar a essência de uma cidade vibrante ao fim
+                        da tarde, com a iluminação dos prédios e a tranquilidade do parque, proporcionando uma atmosfera
+                        relaxante e acolhedora.</p>
+                </article>
+                <article>
+                    <h3>
+                        <img class="img-grid" src="assets/img/img-5.jpg" alt="gato preto e o ceu azul no fundo">
+                    </h3>
+                    <p>Esse trabalho é um dos mais bem avaliados por retratar a elegância e a curiosidade de um gato
+                        preto contra um céu azul vibrante, com sua pelagem brilhando sob a luz do sol, criando um
+                        contraste marcante e visualmente atraente.</p>
+                </article>
+                <article>
+                    <h3>
+                        <img class="img-grid" src="assets/img/img-2.jpg" alt="porto de noite">
+                    </h3>
+                    <p>Esse trabalho é um dos mais bem avaliados por capturar a beleza de um porto à noite, sob um céu
+                        nublado e iluminado pelas luzes da cidade. A cena evoca uma atmosfera de tranquilidade e
+                        mistério, cativando a atenção do espectador.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!--seção com as tabelas de preços-->
+    <section id="tabela" class="white-bg section">
+        <div class="main-content tabela-content">
+            <div>
+                <h2>preços e orçamentos</h2>
+                <p>Para informações sobre preços e orçamentos. Estamos prontos para oferecer opções personalizadas que
+                    atendam às suas necessidades e expectativas.</p>
+            </div>
+            <div class="tabela-responsiva"><!--criação da tabela tanto para site e responsiva-->
+                <table>
+                    <caption>tabela de preços</caption>
+                    <thead>
+                        <tr>
+                            <th>Serviço</th>
+                            <th>Preço Básico</th>
+                            <th>Preço Intermediário</th>
+                            <th>Preço Avançado</th>
+                            <th>Observações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ensaio Fotográfico</td>
+                            <td>R$ 300,00</td>
+                            <td>R$ 500,00</td>
+                            <td>R$ 800,00</td>
+                            <td>inclui 1 hora de sessão</td>
+                        </tr>
+                        <tr>
+                            <td>Cobertura de Eventos</td>
+                            <td>R$ 1.000,00</td>
+                            <td>R$ 1.500,00</td>
+                            <td>R$ 2.500,00</td>
+                            <td>até 6 horas de cobertura</td>
+                        </tr>
+                        <tr>
+                            <td>Edição de Imagens</td>
+                            <td>R$ 150,00</td>
+                            <td>R$ 250,00</td>
+                            <td>R$ 400,00</td>
+                            <td>até 20 imagens</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>consulte para mais informações</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+    <!--seção do contato com a empresa-->
+    <section id="contato" class="contato main-bg section">
+        <div class="main-content contato-content">
+            <div class="contato-text-content">
+                <h2>Envie uma mensagem</h2>
+                <p>Se você tiver dúvidas, comentários ou feedback, não hesite em nos enviar uma mensagem. Estamos aqui
+                    para ajudar e garantir que sua experiência conosco seja a melhor possível. Aguardamos seu contato!
+                </p>
+            </div>
+            <div class="contato-img">
+                <img src="assets/img/undraw_contact_us_re_4qqt.svg"
+                    alt="uma mulher segurando uma carta, celular e um telefone">
+            </div>
+            <div class="contato-form">
+                <fieldset class="form-grid">
+                    <legend>Entre em contato</legend>
+
+                    <!--inputs para contato ou enviar uma mensagem-->
+                    <div class="form-group">
+                        <label for="primeiro-nome"> Primeiro Nome</label>
+                        <input type="text" name="primeiro-nome" id="primeiro-nome" placeholder="Primeiro Nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ultimo-nome">Ultimo Nome</label>
+                        <input type="text" name="ultimo-nome" id="ultimo-nome" placeholder="Ultimo Nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea name="mensagem" cols="30" rows="10" placeholder="Sua Mensagem"></textarea>
+                    </div>
+                    <!--inputs para contato ou enviar uma mensagem-->
+                    <div class="form-group full-width">
+                        <button type="submit">Enviar Mensagem</button>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+    <!--footer com os creditos-->
+    <footer id="footer-main" class="white-bg">
+        
+        <a href="#home">📸 Arte em Foco</a>
+        
+        <p>Feito por Jefferson Luiz!</p>
+        <a href="https://www.instagram.com/jeffersonnjrr/">
+            <img class="icon" src="assets/img/instagram.svg" alt="instagram logo">
+        </a>
+
+        <a href="https://www.linkedin.com/in/jefferson-luiz-1aa9612a3/">
+            <img class="icon" src="assets/img/linkedin.svg" alt="linkedin logo">
+        </a>
+
+        <a href="https://github.com/jeffersonjuni">
+            <img class="icon" src="assets/img/github.svg" alt="github logo">
+        </a>
+    </footer>
+</body>
+
+</html>
