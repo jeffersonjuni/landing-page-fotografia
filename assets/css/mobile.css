@@ -1,165 +1,165 @@
-/*mobile configuração*/
-
+/* Configuração para dispositivos móveis */
 @media (max-width: 800px) {
 
     /* Ajuste geral de texto e espaçamento */
     body {
-        font-size: 1.8rem;
-        /* Tamanho do texto menor para mobile */
-        padding: 0 10px;
+        font-size: 1.6rem; /* Tamanho do texto para mobile */
+        padding: 0 10px; /* Padding nas laterais */
+        margin: 0; /* Remove margens padrão do body */
     }
 
+    nav ul {
+        padding: 0; /* Remove padding do menu */
+    }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 10px 0; /* Espaçamento entre os itens do menu */
+        list-style: none; /* Remove marcadores da lista */
     }
 
     /* Espaçamento do conteúdo principal para mobile */
     .main-content {
-        padding: 20px;
+        padding: 20px; /* Padding para o conteúdo principal */
     }
 
     /* Ajuste de seções */
     section.section {
-        padding: 20px 10px;
+        padding: 20px 10px; /* Espaçamento em seções */
     }
 
     /* Seção de Trabalhos Recentes */
     .grid {
-        display: block;
-        /* Grid em coluna para dispositivos móveis */
+        display: block; /* Grid em coluna para dispositivos móveis */
     }
 
     .grid article {
-        margin-bottom: 20px;
+        margin-bottom: 20px; /* Espaçamento entre artigos */
+        position: relative; /* Permite posicionamento dos contadores */
     }
 
     /* Imagens responsivas */
     img {
-        width: 100%;
-        height: auto;
-
+        width: 100%; /* Imagens ocupam 100% da largura */
+        height: auto; /* Mantém a proporção */
     }
 
     .trabalhos-heading,
     .top3-heading {
         display: flex;
-        text-align: center;
-        padding-top: 10rem;
+        flex-direction: column; /* Alinha itens em coluna */
+        text-align: center; /* Centraliza texto */
+        padding-top: 10rem; /* Espaçamento acima */
     }
 
     .grid h3::before {
-        /*aproximar os numeros das imagens*/
+        /* Aproximar os números das imagens */
         counter-increment: grid-counter;
         content: counter(grid-counter);
-        position: absolute;
-        font-size: 8rem;
+        position: absolute; /* Posicionamento absoluto */
+        font-size: 5rem; /* Tamanho do contador ajustado */
         font-style: italic;
-        top: -3rem;
-        left: 15rem;
-        transform: rotate(5deg);
+        top: -3rem; /* Ajuste vertical */
+        left: 10%; /* Ajuste horizontal */
+        transform: rotate(5deg); /* Rotação para estilo */
     }
 
     .trabalhos-description,
-    /*centralizar titulos de trabalhos recentes e de top trabalhos*/
     .top3-description {
         display: flex;
-        text-align: center;
+        text-align: center; /* Centraliza descrições */
+        flex-direction: column; /* Alinha em coluna */
     }
 
-    .contato h2 {
-        padding-top: 10rem;
-    }
-
+    .contato h2,
     .galeria-heading,
     .galeria-description {
-        padding-top: 10rem;
+        padding-top: 10rem; /* Espaçamento acima */
+        text-align: center; /* Centraliza o texto */
     }
 
     .galeria-description {
-        padding-top: 0.1rem;
+        padding-top: 0.1rem; /* Ajuste de padding */
     }
 
     .galeria-img {
-        padding: auto;
+        padding: auto; /* Para garantir que a galeria fique alinhada */
     }
 
     #galeria-grid {
-        /*deixando grid da galeria no mobile formatada*/
-        display: grid;
-        justify-content: center;
-        padding-left: 5rem;
+        display: grid; /* Deixando grid da galeria no mobile formatada */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Grid responsivo */
+        justify-content: center; /* Centraliza o grid */
+        padding-left: 5rem; /* Espaçamento à esquerda */
     }
 
     /* Formulário de contato */
     .form-grid {
-        display: block;
-        /* Formulário em coluna para mobile */
+        display: block; /* Formulário em coluna para mobile */
     }
 
     .form-group {
-        width: 100%;
-        /* Campos ocupam toda a largura */
+        width: 100%; /* Campos ocupam toda a largura */
+        margin-bottom: 1rem; /* Espaçamento entre campos do formulário */
     }
 
     /* Footer */
     #footer-main {
         display: flex;
-        flex-direction: initial;
-        align-items: center;
-        text-align: center;
+        flex-direction: column; /* Flex direção para coluna */
+        align-items: center; /* Centraliza o footer */
+        text-align: center; /* Centraliza texto */
     }
 
     #footer-main img {
-        width: 20px;
-        /* Ícones menores no footer */
-        margin: 5px 0;
+        width: 20px; /* Ícones menores no footer */
+        margin: 5px 0; /* Espaçamento entre ícones */
     }
 
     .menu {
-        bottom: 0;
-        text-align: center;
+        bottom: 0; /* Posiciona o menu na parte inferior */
+        text-align: center; /* Centraliza o menu */
     }
 
     .menu-content,
     .menu-content ul {
-        flex-direction: column;
+        flex-direction: column; /* Menu em coluna */
         justify-content: center;
+        align-items: center; /* Centraliza itens do menu */
     }
 
     .menu-content {
-        height: 100vh;
+        height: auto; /* Ajusta a altura do menu */
+        padding: 1rem; /* Espaçamento interno do menu */
     }
 
     /* Oculta o checkbox */
     .close-menu {
-        display: none;
-        position: fixed;
-        z-index: 2;
-        top: 0;
-        left: 0;
+        display: none; /* Esconde checkbox */
+        position: fixed; /* Fixa o menu */
+        z-index: 2; /* Coloca acima de outros elementos */
+        top: 0; /* Alinha ao topo */
+        left: 0; /* Alinha à esquerda */
     }
 
     /* Ícone inicial do botão de menu (☰) */
     .close-menu-label::after {
-        content: '☰';
-        position: fixed;
-        z-index: 2;
-        top: 2rem;
-        right: 2rem;
-        background-color: var(--primary-color);
-        color: var(--white-color);
-        font-size: 3rem;
-        line-height: 3rem;
-        width: 3rem;
-        height: 3rem;
-        text-align: center;
-        padding: 0.5rem;
-        cursor: pointer;
+        content: '☰'; /* Ícone de menu */
+        position: fixed; /* Fixa o ícone */
+        z-index: 2; /* Coloca acima de outros elementos */
+        top: 2rem; /* Distância do topo */
+        right: 2rem; /* Distância da direita */
+        background-color: var(--primary-color); /* Cor de fundo do ícone */
+        color: var(--white-color); /* Cor do ícone */
+        font-size: 3rem; /* Tamanho do ícone */
+        line-height: 3rem; /* Altura da linha */
+        width: 3rem; /* Largura do ícone */
+        height: 3rem; /* Altura do ícone */
+        text-align: center; /* Centraliza o texto */
+        padding: 0.5rem; /* Espaçamento interno */
+        cursor: pointer; /* Muda o cursor para pointer */
     }
 
     /* Esconde o menu inicialmente */
-    /*gambiarra que funcionou :)*/
     .menu {
         display: none;
         position: fixed;
@@ -169,22 +169,19 @@
         height: 100vh;
         color: var(--white-color);
         padding: 1rem;
-        
     }
 
     /* Exibe o menu quando o checkbox é marcado */
-    .close-menu:checked~.menu {
-        display: block;
+    .close-menu:checked ~ .menu {
+        display: block; /* Mostra o menu */
     }
 
     /* Troca o ícone para '×' quando o menu está aberto */
-    .close-menu:checked+.close-menu-label::after {
-        content: '×'; 
+    .close-menu:checked + .close-menu-label::after {
+        content: '×'; /* Ícone de fechar */
     }
 
-    .menu-spacing{
-        display: none;
+    .menu-spacing {
+        display: none; /* Esconde espaçamento do menu */
     }
-
-    
 }
