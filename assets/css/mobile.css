@@ -1,59 +1,55 @@
-/*mobile configuração*/
-
+/* Configuração para dispositivos móveis */
 @media (max-width: 800px) {
 
     /* Ajuste geral de texto e espaçamento */
     body {
-        font-size: 1.8rem;
-        /* Tamanho do texto menor para mobile */
+        font-size: 1.8rem; /* Tamanho do texto menor para mobile */
         padding: 0 10px;
+        margin: 0; /* Remove margens padrão do body */
     }
 
-
     nav ul li {
-        margin: 10px 0;
+        margin: 10px 0; /* Espaçamento entre os itens do menu */
     }
 
     /* Espaçamento do conteúdo principal para mobile */
     .main-content {
-        padding: 20px;
+        padding: 20px; /* Espaçamento interno */
     }
 
     /* Ajuste de seções */
     section.section {
-        padding: 20px 10px;
+        padding: 20px 10px; /* Espaçamento em seções */
     }
 
     /* Seção de Trabalhos Recentes */
     .grid {
-        display: block;
-        /* Grid em coluna para dispositivos móveis */
+        display: block; /* Grid em coluna para dispositivos móveis */
     }
 
     .grid article {
-        margin-bottom: 20px;
+        margin-bottom: 20px; /* Espaçamento entre artigos */
     }
 
     /* Imagens responsivas */
     img {
-        width: 100%;
-        height: auto;
-
+        width: 100%; /* Imagens ocupam 100% da largura */
+        height: auto; /* Mantém a proporção */
     }
 
     .trabalhos-heading,
     .top3-heading {
         display: flex;
         text-align: center;
-        padding-top: 10rem;
+        padding-top: 10rem; /* Espaçamento acima */
     }
 
     .grid h3::before {
-        /*aproximar os numeros das imagens*/
+        /* Aproximar os números das imagens */
         counter-increment: grid-counter;
         content: counter(grid-counter);
         position: absolute;
-        font-size: 8rem;
+        font-size: 8rem; /* Tamanho do contador */
         font-style: italic;
         top: -3rem;
         left: 15rem;
@@ -61,58 +57,53 @@
     }
 
     .trabalhos-description,
-    /*centralizar titulos de trabalhos recentes e de top trabalhos*/
     .top3-description {
         display: flex;
-        text-align: center;
+        text-align: center; /* Centraliza os títulos */
     }
 
-    .contato h2 {
-        padding-top: 10rem;
-    }
-
+    .contato h2,
     .galeria-heading,
     .galeria-description {
-        padding-top: 10rem;
+        padding-top: 10rem; /* Espaçamento acima */
+        text-align: center; /* Centraliza o texto */
     }
 
     .galeria-description {
-        padding-top: 0.1rem;
+        padding-top: 0.1rem; /* Ajuste de padding */
     }
 
     .galeria-img {
-        padding: auto;
+        padding: auto; /* Para garantir que a galeria fique alinhada */
     }
 
     #galeria-grid {
-        /*deixando grid da galeria no mobile formatada*/
+        /* Deixando grid da galeria no mobile formatada */
         display: grid;
-        justify-content: center;
-        padding-left: 5rem;
+        justify-content: center; /* Centraliza o grid */
+        padding-left: 5rem; /* Espaçamento à esquerda */
     }
 
     /* Formulário de contato */
     .form-grid {
-        display: block;
-        /* Formulário em coluna para mobile */
+        display: block; /* Formulário em coluna para mobile */
     }
 
     .form-group {
-        width: 100%;
-        /* Campos ocupam toda a largura */
+        width: 100%; /* Campos ocupam toda a largura */
+        margin-bottom: 1rem; /* Espaçamento entre campos do formulário */
     }
 
     /* Footer */
     #footer-main {
         display: flex;
-        flex-direction: initial;
-        align-items: center;
+        flex-direction: column; /* Flex direção para coluna */
+        align-items: center; /* Centraliza o footer */
         text-align: center;
     }
 
     #footer-main img {
-        width: 20px;
-        /* Ícones menores no footer */
+        width: 20px; /* Ícones menores no footer */
         margin: 5px 0;
     }
 
@@ -123,18 +114,18 @@
 
     .menu-content,
     .menu-content ul {
-        flex-direction: column;
+        flex-direction: column; /* Menu em coluna */
         justify-content: center;
     }
 
     .menu-content {
-        height: 100vh;
+        height: 100vh; /* Altura do menu */
     }
 
     /* Oculta o checkbox */
     .close-menu {
-        display: none;
-        position: fixed;
+        display: none; /* Esconde checkbox */
+        position: fixed; /* Fixa o menu */
         z-index: 2;
         top: 0;
         left: 0;
@@ -142,49 +133,46 @@
 
     /* Ícone inicial do botão de menu (☰) */
     .close-menu-label::after {
-        content: '☰';
+        content: '☰'; /* Ícone de menu */
         position: fixed;
         z-index: 2;
         top: 2rem;
         right: 2rem;
         background-color: var(--primary-color);
         color: var(--white-color);
-        font-size: 3rem;
+        font-size: 3rem; /* Tamanho do ícone */
         line-height: 3rem;
-        width: 3rem;
-        height: 3rem;
+        width: 3rem; /* Largura do ícone */
+        height: 3rem; /* Altura do ícone */
         text-align: center;
-        padding: 0.5rem;
+        padding: 0.5rem; /* Espaçamento interno */
         cursor: pointer;
     }
 
     /* Esconde o menu inicialmente */
-    /*gambiarra que funcionou :)*/
     .menu {
-        display: none;
+        display: none; /* Esconde o menu */
         position: fixed;
         top: 0;
         right: 0;
-        width: auto;
-        height: 100vh;
+        width: auto; /* Largura do menu */
+        height: 100vh; /* Altura do menu */
         color: var(--white-color);
-        padding: 1rem;
-        
+        padding: 1rem; /* Espaçamento interno */
     }
 
     /* Exibe o menu quando o checkbox é marcado */
-    .close-menu:checked~.menu {
-        display: block;
+    .close-menu:checked ~ .menu {
+        display: block; /* Mostra o menu */
     }
 
     /* Troca o ícone para '×' quando o menu está aberto */
-    .close-menu:checked+.close-menu-label::after {
-        content: '×'; 
+    .close-menu:checked + .close-menu-label::after {
+        content: '×'; /* Ícone de fechar */
     }
 
-    .menu-spacing{
-        display: none;
+    .menu-spacing {
+        display: none; /* Esconde espaçamento do menu */
     }
 
-    
 }
