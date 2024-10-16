@@ -1,11 +1,14 @@
-/* Configuração responsiva para todos os aparelhos celulares */
+/*mobile configuração*/
+
 @media (max-width: 800px) {
 
     /* Ajuste geral de texto e espaçamento */
     body {
-        font-size: 1.8rem; /* Tamanho do texto menor para mobile */
+        font-size: 1.8rem;
+        /* Tamanho do texto menor para mobile */
         padding: 0 10px;
     }
+
 
     nav ul li {
         margin: 10px 0;
@@ -23,7 +26,8 @@
 
     /* Seção de Trabalhos Recentes */
     .grid {
-        display: block; /* Grid em coluna para dispositivos móveis */
+        display: block;
+        /* Grid em coluna para dispositivos móveis */
     }
 
     .grid article {
@@ -34,6 +38,7 @@
     img {
         width: 100%;
         height: auto;
+
     }
 
     .trabalhos-heading,
@@ -44,7 +49,7 @@
     }
 
     .grid h3::before {
-        /* Aproximar os números das imagens */
+        /*aproximar os numeros das imagens*/
         counter-increment: grid-counter;
         content: counter(grid-counter);
         position: absolute;
@@ -56,6 +61,7 @@
     }
 
     .trabalhos-description,
+    /*centralizar titulos de trabalhos recentes e de top trabalhos*/
     .top3-description {
         display: flex;
         text-align: center;
@@ -79,6 +85,7 @@
     }
 
     #galeria-grid {
+        /*deixando grid da galeria no mobile formatada*/
         display: grid;
         justify-content: center;
         padding-left: 5rem;
@@ -86,24 +93,26 @@
 
     /* Formulário de contato */
     .form-grid {
-        display: flex; /* Mudança para flex para melhor responsividade */
-        flex-direction: column; /* Formulário em coluna para mobile */
+        display: block;
+        /* Formulário em coluna para mobile */
     }
 
     .form-group {
-        width: 100%; /* Campos ocupam toda a largura */
+        width: 100%;
+        /* Campos ocupam toda a largura */
     }
 
     /* Footer */
     #footer-main {
         display: flex;
-        flex-direction: column; /* Mudança para coluna */
+        flex-direction: initial;
         align-items: center;
         text-align: center;
     }
 
     #footer-main img {
-        width: 20px; /* Ícones menores no footer */
+        width: 20px;
+        /* Ícones menores no footer */
         margin: 5px 0;
     }
 
@@ -150,6 +159,7 @@
     }
 
     /* Esconde o menu inicialmente */
+    /*gambiarra que funcionou :)*/
     .menu {
         display: none;
         position: fixed;
@@ -159,19 +169,22 @@
         height: 100vh;
         color: var(--white-color);
         padding: 1rem;
+        
     }
 
     /* Exibe o menu quando o checkbox é marcado */
-    .close-menu:checked ~ .menu {
+    .close-menu:checked~.menu {
         display: block;
     }
 
     /* Troca o ícone para '×' quando o menu está aberto */
-    .close-menu:checked + .close-menu-label::after {
+    .close-menu:checked+.close-menu-label::after {
         content: '×'; 
     }
 
-    .menu-spacing {
+    .menu-spacing{
         display: none;
     }
+
+    
 }
