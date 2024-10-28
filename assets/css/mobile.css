@@ -1,33 +1,43 @@
-/*mobile configuração*/
-
 @media (max-width: 800px) {
 
-    /* Ajuste geral de texto e espaçamento */
+    /* Layout geral */
     body {
-        font-size: 1.8rem;
-        /* Tamanho do texto menor para mobile */
-        padding: 0 10px;
+        font-size: 1.6rem;
+        margin: 0;
+        padding: 10px;
+        background-color: #ffffff;
+        color: #333;
+        box-sizing: border-box;
+        line-height: 1.5;
     }
 
-
-    nav ul li {
-        margin: 10px 0;
+    /* Cabeçalhos */
+    h1, h2, h3 {
+        font-size: 2rem;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 15px;
     }
 
-    /* Espaçamento do conteúdo principal para mobile */
-    .main-content {
-        padding: 20px;
+    /* Conteúdo principal */
+    .main-content, 
+    section {
+        padding: 15px 10px;
+        margin-bottom: 15px;
     }
 
-    /* Ajuste de seções */
-    section.section {
-        padding: 20px 10px;
-    }
-
-    /* Seção de Trabalhos Recentes */
+    /* Grid em coluna */
     .grid {
         display: block;
-        /* Grid em coluna para dispositivos móveis */
+        width: 100%;
+    }
+
+    #trabalhos, p{
+        text-align: left;
+    }
+
+    #p-center{
+        text-align: center;
     }
 
     .grid article {
@@ -38,84 +48,94 @@
     img {
         width: 100%;
         height: auto;
-
+        display: block;
+        margin-bottom: 10px;
     }
 
-    .trabalhos-heading,
-    .top3-heading {
-        display: flex;
-        text-align: center;
-        padding-top: 10rem;
+    /* Menu e navegação */
+    nav {
+        position: relative;
     }
 
-    .grid h3::before {
-        /*aproximar os numeros das imagens*/
-        counter-increment: grid-counter;
-        content: counter(grid-counter);
-        position: absolute;
-        font-size: 8rem;
-        font-style: italic;
-        top: -3rem;
-        left: 15rem;
-        transform: rotate(5deg);
-    }
-
-    .trabalhos-description,
-    /*centralizar titulos de trabalhos recentes e de top trabalhos*/
-    .top3-description {
-        display: flex;
+    .menu-button {
+        display: block;
+        font-size: 2rem;
+        background-color: var(--primary-color, #333);
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        width: 100%;
         text-align: center;
     }
 
-    .contato h2 {
-        padding-top: 10rem;
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: none; /* Escondido por padrão */
+        text-align: center;
+        background-color: #f9f9f9;
     }
 
-    .galeria-heading,
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Exibe o menu ao clicar no botão */
+    .menu-button:checked + ul {
+        display: block;
+    }
+
+    /* Títulos e descrições */
+    .trabalhos-heading, 
+    .galeria-heading {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .top3-heading{
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .trabalhos-description, 
+    .top3-description, 
     .galeria-description {
-        padding-top: 10rem;
+        text-align: center;
+        margin-top: 10px;
     }
 
-    .galeria-description {
-        padding-top: 0.1rem;
-    }
-
-    .galeria-img {
-        padding: auto;
-    }
-
+    /* Galeria organizada */
     #galeria-grid {
-        /*deixando grid da galeria no mobile formatada*/
         display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
         justify-content: center;
-        padding-left: 5rem;
     }
 
-    /* Formulário de contato */
+    /* Formulário responsivo */
     .form-grid {
         display: block;
-        /* Formulário em coluna para mobile */
+        width: 100%;
     }
 
     .form-group {
         width: 100%;
-        /* Campos ocupam toda a largura */
+        margin-bottom: 10px;
     }
 
     /* Footer */
     #footer-main {
-        display: flex;
-        flex-direction: initial;
-        align-items: center;
         text-align: center;
+        padding: 10px;
+        background-color: #f1f1f1;
     }
 
     #footer-main img {
         width: 20px;
-        /* Ícones menores no footer */
-        margin: 5px 0;
+        margin: 5px;
     }
-
     .menu {
         bottom: 0;
         text-align: center;
@@ -185,6 +205,4 @@
     .menu-spacing{
         display: none;
     }
-
-    
 }
