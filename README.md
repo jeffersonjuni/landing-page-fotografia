@@ -18,3 +18,7 @@ CSS3 para estilização e responsividade
 
 ⚠️ Observação
 Esta página foi desenvolvida apenas para fins de demonstração, focando na estrutura do layout e no design. Nenhuma funcionalidade dinâmica foi implementada, pois o projeto utiliza apenas HTML e CSS.
+
+📷 Prévia do Projeto
+![print 1](https://github.com/user-attachments/assets/d58894a8-b5d6-44bf-b6a4-b532fc0dc67a)
+
